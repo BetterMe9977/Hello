@@ -30,7 +30,7 @@ public class ClassLoad_ {
                 System.out.println("ok");
                 break;
             case "3":
-                Class cls2 = Class.forName("Person");
+                Class cls2 = Class.forName("com.hspedu.reflection.class_.Person");
                 Object o2 = cls2.newInstance();
                 Method m2 = cls2.getMethod("hi");
                 m2.invoke(o2);
