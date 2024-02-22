@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<span id= "s1" />wonderful day</span>
+
+		<script>
+			//获取span标签的内容体
+			var s1 = document.getElementById("s1");
+			alert(s1.innerHTML);
+			
+			//设置span标签的内容体
+			s1.innerHTML="snowing";
+			
+			//向span标签追加内容体
+			s1.innerHTML+=", happy";
+		</script>
+	</body>
+</html>
+
+
+
+<!-- 
+  checked
+  元素对象.checked，获取元素对象的checked属性值
+  元素对象.checked=属性值		设置元素对象的checked属性值
+  
+  注意：HTML中checked=“checked”，JavaScript 中返回true，false
+  
+  innerHTML
+  元素对象.innerHTML，	获取元素对象的内容体
+  元素对象.innerHTML=属性值	设置元素对象的内容体
+  向span标签追加内容体		innerHTML+=""
+  -->
+  
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var reg = /\s+/;  // 1～多个空格；      \s 代表空格，+ 代表0～多个
+			
+			var flag=reg.test("  a  ");
+			alert(flag);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+<!-- 
+
+	/^表达式$/ 直接量 方式
+			全部字符复合才为true，只要有无法成立正则的字符存在，即为false
+			适用于表单检验
+	
+	/表达式/ 普通 方式
+			只要有符合正则的字符存在，就为true，全部不符合才为false
+			适用于字符串查找/替换
+		
+	-->
+	
+	

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var reg = /^\s*$/;  // 0～多个空格；      /s 代表空格，* 代表0～多个
+			
+			var flag=reg.test("");
+			alert(flag);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+<!-- 
+	正则对象
+	RegExp对象的创建方式
+	var reg = new RegExp("表达式");    //开发中基本不用
+	var reg = /^表达式$/;		//直接量，开发中常用
+	直接量中存在边界，即^代表开始，$代表结束
+	直接量方式的正则是对象，不是字符串，不能用引号
+	
+	test方法
+	正则对象.test(string);	用来校验字符串是否匹配正则。全部字符匹配返回true，否则返回false
+	\s 代表空格，* 代表0～多个
+		
+	
+	-->

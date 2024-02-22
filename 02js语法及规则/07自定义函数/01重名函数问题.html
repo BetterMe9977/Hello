@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function getSum(a,b,c) {
+				alert(a+"-"+b+"-"+c);					
+			}
+				
+			function getSum(a,b) {	//方法覆盖
+				alert(a+"-"+b);
+			}
+				
+			getSum(1,2,3);
+			getSum(); //如果形参赋值，就使用undefined
+			
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>
+
+<!-- 
+
+函数使用的注意事项
+1. JavaScript 函数调用执行完毕一定有返回值，值及类型根据return决定，
+	如果未return具体返回值，返回值为undefined：
+2. JavaScript 函数若同名，则不存在方法重载，只有方法相互覆盖，
+	最后定义的函数覆盖之前的定义
+3. 因为JavaScript不存在函数重载，所以JavaScript进根据方法名来调用函数，
+	即使参与函数的形参不匹配，也不会影响正常调用
+4. 如果形参赋值，就使用undefined
+
+
+
+ -->

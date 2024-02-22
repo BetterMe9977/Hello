@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.ys1 {
+				color: red;
+			}
+			.ys2 {
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<span id= "s1" class="ys1"/>wonderful day</span>
+		<script>
+			//需要获取s1元素value属性值
+			var s1=document.getElementById("s1");
+			alert(s1.className);
+			
+			//修改 s1 的 value 属性值
+			s1.className="ys2";
+			
+		</script>
+	</body>
+</html>
+
+<!-- 
+ 元素对象常见属性
+ 1. value
+ 元素对象.value，获取元素对象的value属性值。
+ 元素对象.value=属性值   设置元素对象的value属性值
+ 修改元素的值
+ 
+ 2. className
+ 元素对象.className，获取元素对象的class属性值。
+ 元素对象.className=属性值，设置元素对象的class属性值。
+ 修改元素样式
+ -->
+ 
+ 

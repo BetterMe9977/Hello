@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var id;
+			//需要2秒执行一次run1方法
+			function run1() {
+				alert("run1");
+				//执行一次run1方法后，清除对应的定时器
+				clearInterval(id);
+			}
+			
+			id = setInterval("run1()",2000);
+			
+			// 取消循环定时器
+			//clearInterval（循环定时器ID）；
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<!-- 
+ 循环定时器的设置和取消
+ 启动循环定时器-setInterval()
+ 循环定时器，调用一次就会创建并循环执行一个定时器
+ 格式：
+	setInterval（调用方法，毫秒值）
+	//毫秒值：循环周期
+	效果：每隔一秒就会弹出一次对话框
+	
+ 
+ -->

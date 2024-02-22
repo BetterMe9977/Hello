@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var x=10;
+			//eval(string) 可以把传入的字符串作为JavaScript代码执行
+			//可以扩展程序功能
+			//注意事项：只能传递基本数据类型的字符串，而不能传入字符串对象
+			eval("var x=10;")
+			alert(x)
+			eval(new String("var x=10;"));
+			alert(x);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+<!-- 
+ 全局函数global
+ 执行函数 eval()   
+ eval(string) 可以把传入的字符串作为JavaScript代码执行
+ 作用：用于增强程序的扩展性。
+ 注：只可以传递原始数据类型string，不能传递String对象。
+ -->
+ 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--
+		 DOM对象的相关方法： document
+		 getElementByld();		通过元素ID获取对应的元素对象
+		 getElementsByName();	通过元素的name属性获取符合要求的所有元素，
+		    通过name属性，返回是一个元素节点对象 数组，如果找不到，返回空数组
+		 getElementsByTagName();	通过元素的元素名属性获取符合要求的所有元素
+		 getElementsByClassName();	通过元素的class属性获取符合要求的所有元素
+		 -->
+		 <script>
+			 
+		 </script>
+	</head>
+	<body>
+		
+		<input type= "text" id= "t1"/>
+		
+		<input type= "checkbox" name= "hobby" value="read"/>
+		<input type= "checkbox" name= "hobby" value="code"/>
+		<input type= "checkbox" name= "hobby" value="run"/>
+		
+		<ul>
+			<li>javaee</li>
+			<li>android</li>
+			<li>ios</li>
+			<li>php</li>
+		</ul>
+		
+		<input type= "radio" name= "sex" value="man" class="h1"/>
+		<input type= "radio" name= "sex" value="woman" class="h1"/>
+		
+		<script>
+			var t1=document.getElementById("t1");
+			alert(t1);
+	
+			alert(document.getElementById("t2"));	//返回null
+			
+			//通过元素的name属性获取符合要求的所有元素
+			//返回是一个元素节点对象 数组
+			var arr=document.getElementsByName("hobby");
+				var arr=document.getElementsByName("hobby"); //0
+			alert(arr.length);
+			
+			//通过标签名获取所需元素
+			//getElementsByTagName();	通过元素的元素名属性获取符合要求的所有元素
+			var arr=document.getElementsByTagName("li");
+			alert(arr.length);
+				
+			//getElementsByClassName();	通过元素的class属性获取符合要求的所有元素
+			var arr=document.getElementsByClassName("h1");	通过元素的class属性获取符合要求的所有元素
+			alert(arr.length);
+		</script>
+	</body>
+</html>
+
+
+<!-- 
+ DOM对象的简述
+ DOM（Document Object Model） 文档对象模型
+	文档：标记型文档（HTML等）
+DOM是将标记型文档中所有内容（标签/文本/属性）都封装成对象，通过操作对象的属性或者方法，
+来达到操作或改变HTML展示效果的目的。
+
+DOM树介绍
+<html>										根元素<html>  
+	<head>									元素<head>
+		<title>文档标题</title>				元素<title>   --》文本：“文档标题”  
+	</head>									</a>   <h1>	 --》文本：“我的链接”/“我的标题”
+	<body>
+		<a href="">我的链接</a>
+		<h1>我的标题</h1>
+	</body>
+</html>
+上述HTML文档会被浏览器由上到下依次加载并解析。 加载到浏览器的内存
+加载并解析到内存中，会生成一张DOM树
+其中：
+1. 每个标签会被加载成DOM树上的一个元素节点对象
+2. 每个标签的属性会被加载成DOM树上 的一个属性节点对象
+3. 每个标签的内容体会被加载成DOM树上的一个文本节点对象
+4. 整个DOM树，是一个文档节点对象，即DOM对象
+5. 一个HTML文档加载到内存中就会形成一个DOM对象
+
+DOM树的特点：
+1. 必定会有一个根节点
+2. 每个节点都是节点对象
+3. 常见的节点关系：父子节点关系
+4. 文本节点对象没有子节点--叶子节点
+5. 每个节点都有一个父节点，零到多个子节点
+6. 只有根节点没有父节点
+ -->
+ 
+ 

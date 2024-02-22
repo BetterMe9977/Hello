@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function run1() {
+				alert("run1");
+			}
+			
+			//2秒执行一次run1方法
+			var id = setTimeout("run1()",2000);
+			
+			// 取消一次性定时器
+			
+			clearTimeout(id);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<!-- 
+ 一次性的设置和取消
+ 启动一次性定时器-setTimeout()
+ 一次性定时器，调用一次就会创建并循环执行一个定时器一次
+ 格式：
+ 	setTimeout（调用方法，毫秒值）
+ 	//毫秒值：循环周期
+ 	效果：每隔一秒就会弹出一次对话框
+
+停止一次性定时器clearTimeout()
+setTimeout方法在创建一个定时器的同时，还会返回一个定时器的ID，该ID就代表这个定时器。
+此定时器ID在当前页面是不重复的
+我们可以通过clearTimeout方法，指定某个一次性定时器停止
+格式：
+	clearTimeout(定时器id)
+
+	
+ 
+ -->

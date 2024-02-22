@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//属性定义方式
+			//1. this关键字，在对象声明定义阶段，定义一个属性
+			//2. 创建对象后，使用对象.属性 方式，动态定义属性
+			
+			function Person(n,a) {
+				this.name=n;
+				this.age=a;
+			}
+			
+			//创建了一个Person对象，p
+			var p = new Person("jack","20");
+			p.sex="男";//为Person对象声明并赋值成功
+	
+			alert(p.age);
+			alert(p.name);
+			alert(p.sex);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+<!-- 
+ 自定义对象
+ function构造函数
+ JavaScript 中的引用数据类型都是对象，而对象在JavaScript中可以用函数标示
+ 相当于java中创建某个class类
+ 无形参格式：
+ function 对象名() {
+	 函数体
+ }
+ 应用场景：适用于对象构建及代码复用。
+ -->
+ 
+ 

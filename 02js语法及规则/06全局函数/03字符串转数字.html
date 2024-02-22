@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//var str = "10.55";
+			//var str = "10.55a";
+			//var str = "10.5a5";
+			//var str = "1a0.55";
+			var str = "a10.55";   
+			//NaN 返回NaN（Not A Number，一个数字类型的标识，标示不是一个正确的数字）
+			
+			var num1 = parseInt(str);
+			var num2 = parseFloat(str);
+			
+			alert(typeof(num1) + ":" + num1); //number 类型
+			alert(typeof(num2) + ":" + num2);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<!-- 
+ 字符串转数字
+ paserInt()		解析一个字符串并返回一个整数
+ parseFloat()	解析一个字符串并返回一个浮点数
+ 
+ parseInt(string)	string 按照字面值转换为整数类型，小数点后面部分不关注。
+ parseFloat(string) string 按照字面值转换为小数类型。
+ 
+ 注：
+ 1. 如果字符串的某个字符从字面值上无法转为数字，那么从该字符开始停止转换，
+ 仅返回前面正确的转换值。（例如：11.5a55，parseInt结果11，parseFloat结果11.5）
+ 2. 如果字符串的第一个字符就无法从字面值上转为数字，那么停止转换，
+ 返回NaN（Not A Number，一个数字类型的标识，标示不是一个正确的数字）。
+ 
+ -->

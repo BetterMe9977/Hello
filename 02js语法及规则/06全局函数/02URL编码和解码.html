@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//encodeURI(string)	把字符串编码为URL,返回值是编码后的结果
+			var msg="http://www.itcast.cn/.index.html?username=张三&password=123";
+			alert(msg);
+			var temp=encodeURI(msg);
+			alert(temp);
+			
+			//decodeURI(string)	解码某个编码的URL，返回值是解码后的结果
+			alert(decodeURI(temp));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<!-- 
+ 编码和解码
+ URL/URI编码：中文及特殊符号	%16进制
+ 作用：保证数据传递的完整性
+ encodeURI()	把字符串编码为URL，返回值是编码后的结果
+ decodeURI()	解码某个编码的URL，返回值是解码后的结果
+ 
+ URI 和 URL 的区别：
+ 
+ URI是统一资源标识符。标识资源详细名称。
+ URL是统一资源定位器。定位资源的网络位置。
+ 
+资源：可以通过浏览器访问的信息统统成为资源。（图片/文本/HTML/CSS等等……）
+
+URI标识资源的详细名称。包含资源名称。
+URL定位资源的网络位置。包含http://。
+
+例如：
+http://www.itcast.cn/			是URL
+/a.html							是URI
+http://www.itcast.cn/a.html		即是URL，也是URI
+ -->

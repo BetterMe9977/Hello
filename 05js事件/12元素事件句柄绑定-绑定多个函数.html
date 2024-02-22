@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function run1() {
+				alert("run1")
+			}
+			function run2() {
+				alert("run2")
+			}
+			function run3() {
+				alert("run3")
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 绑定多个无参函数 -->
+		<input type="text" value="1111" onclick="run1(),run2(),run3()" /><br/>
+		
+		
+	</body>
+</html>
+
+
+<!-- 
+ JS事件的两种绑定方式
+ 元素事件句柄绑定
+ 将事件以元素的方式写到标签内部，进而绑定对应函数
+ 
+ 事件句柄绑定方式：
+	优点：1.开发快捷
+		2.传参方便
+		3. 可以绑定多个函数
+	缺点：JS 和 HTML 代码高度揉合在一起，不利于多部门的项目开发维护
+ 
+ -->

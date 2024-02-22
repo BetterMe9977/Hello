@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="01demo1.js">
+			//alert("标签内部的你好");   //不会执行
+		</script>
+		
+		<script>
+			alert("标签内部的你好");
+		</script> 
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<!--  
+-->
+
+
+<!--  
+
+注意：外部引用时，当前script标签 内不能有script代码，不会执行
+	可以重新在新的<script></script> 标签中写代码
+	
+<script></script> 标签规范
+开发规定，<script></script> 标签的放置为： Body结束标签</body>前。
+优点：
+	保证html展示内容优先加载，最后加载脚本，增强用户体验性。
+-->

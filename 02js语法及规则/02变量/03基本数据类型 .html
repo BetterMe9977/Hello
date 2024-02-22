@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var str1 = "nihao";
+			alert(typeof(str1)); //string
+			
+			str1=10;
+			alert(typeof(str1)); //number
+			
+			str1=true;
+			alert(typeof(str1)); //boolean
+			
+			str1=undefined;
+			alert(typeof(str1)); //undefined
+			
+			str1=null;
+			alert(typeof(str1)); //object
+			
+			// alert(str1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+<!-- 
+ 注意：因为undefined是从null中派生出来的，所以 undefined==null
+ 
+ JavaScript 区别于 java，是若类型语言，变量的使用不用严格遵循规范，所以一个变量声明后，可以赋予任意类型的的值
+ 
+ 通过typeof运算符可以分辨变量值属于哪种基本数据类型
+ 对变量或值调用 typeof 运算符将返回下列值之一：
+ 1. undefined 如果变量是 Undefined 类型的
+ 2. boolean 如果变量是 Boolean 类型的
+ 3. number 如果变量是 Number 类型的
+ 4. string 如果变量是 String 类型的
+ 5. object 如果变量是一种引用类型或 Null 类型的
+ 
+ ECMAScript 实现之初的一个bug，null属于基本数据类型，typeof(null) --> 返回object
+ -->
+ 
+ <!--
+ 引用数据类型
+ 引用数据类型通常叫做类（class），但在JavaScript中，因为不存在编译过程，所以没有类的概念所以处理的引用数据类型都是对象
+ 标准创建方式：
+ 	var str = new String(); //和java相同
+ 	var str = new String; //js独有方式
+ 
+  -->

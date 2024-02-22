@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function run1() {
+				alert("表单的提交按钮被点击了");
+				//表单校验
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 
+			表单提交按钮被点击---执行run1()
+			
+			onsubmit 用于表单的校验 ，该事件也能够控制表达的提交 返回boolean
+			true 允许表单提交
+			false 阻止表单提交
+		 -->
+		<form onsubmit="return run1()">
+			<input type="text" name="uname"/><br/>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>
+
+
+<!-- 
+ 表单提交事件 onsubmit
+ 表单提交事件：表单的提交按钮被点击时触发
+ 注意：该事件需要返回boolean类型的值来执行提交/阻止 表单数据的操作
+ 1. 事件得到true，提交表单数据
+ 2. 事件得到false，阻止表单数据提交
+ 	执行方法 run1()前要写 return
+ 	
+onsubmit 用于表单的校验 ，该事件也能够控制表达的提交 返回boolean
+ 	true 允许表单提交
+ 	false 阻止表单提交
+ -->
