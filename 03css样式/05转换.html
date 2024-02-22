@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div {
+				display: inline;
+			}
+			li {
+				display: inline;
+			}
+			span {
+				display: block;
+			}
+			a {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h1>块级元素1-div-由块级元素 ---》 行内元素【不自动转换】</h1>
+		<div>div1</div>
+		<div>div2</div>
+		
+		<h1>块级元素2-无序列表</h1>
+		<ul>
+			<li>博客</li>
+			<li>程序员</li>
+			<li>博学</li>
+		</ul>
+		
+		<h1>行内元素1-span--由行内元素 ---》 块级元素【自动转换】</h1>
+		<span>span1</span>
+		<span>span2</span>
+		
+		<h1>行内元素2-</h1>
+		<a>a1</a>
+		<a>a2</a>
+		hello
+		
+	</body>
+</html>
+
+
+<!--  
+-->
+
+<!--  
+转换
+display
+html提供的丰富的标签被定义为不同的类型： 块级元素 和  行内元素
+	块元素：以区域块方式出现，结束会自动换行
+		常见：<h1>标题, <p>段, <div>, <ul> 等
+	行内元素：根据内容多少 占用行内空间，不会自动换行
+		常见：<span>, <a>超链接 等
+	
+display 属性可以使得元素在行内元素和块元素之间相互转换
+
+	格式：
+		选择器{display:属性值}
+	
+	常用属性值：
+		block：显示为块元素（块元素默认的display属性值）
+		inline：显示为行内元素（行内元素默认的display属性值）
+		none：被隐藏，不显示，不占用页面空间
+--> 
