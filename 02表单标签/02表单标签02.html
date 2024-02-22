@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+			<form>
+				用户ID：<input type="hidden" name="uid" value="2smkj83jdkal33d"/><br/>
+				用户名：<input type="text" name="uname"/> <br/>
+				姓名：<input type="text" name="name"/><br/>
+				爱好：<input type="checkbox" name="hobby" value="code" checked="checled"/>编程
+					<input type="checkbox" name="hobby" value="read"/>阅读
+					<input type="checkbox" name="hobby" value="run"/>跑步
+					<br />
+					照片：<input type="file" name="photo""/> <br />
+					<input type="submit" value="注册"/>
+					<input type="reset"/ value="重置">
+					<input type="button" value="按钮"/>
+			</form>
+		</body>
+	</html>
+	<!--
+		1. 定义一个表单  <form>表单内容</form>
+		2. 在表单中定义对应的表单输入项 <input />
+		3. <select>
+		4. <textarea>
+		
+	checkbox：设置复选框
+	-->
+	<!--
+	<input /> 标签   用户可以在该标签上 通过填写和选择 进行数据的输入
+	1. type： 设置该标签的种类
+		text： 文本框。默认
+		password： 密码框。 非明文
+		radio： 单选框。  在同一组内有单选效果，分组用到name，name属性值相同
+		checkbox： 复选框。  在同一组内有 复选效果
+		submit： 提交按钮。用于控制表单提交数据
+		reset： 重置按钮。用于将表单输入恢复到默认状态
+		file：附件框。用于文件上传
+		hidden：隐藏域。一般用于提交服务器需要拿到，但用户不需要看到的数据
+		button：普通按钮。 ！需要和js的时间一起用
+		
+	2. name：单选框，复选框进行数据的分组。/  设置该标签对应的参数名
+		某个表单输入项目需要通过参数列表提交 ，就必须设置name属性
+		
+	3. value：设置该标签对应的 参数值，/  作为按钮的名字
+	4. checked：设置单选框，复选框的默认选中状态。 
+	5. readonly：设置该标签的参数值只读，用户无法手动更改
+	6. disabled：设置该标签不可用，参数值无法更改，且参数值也无法提交
+			
+	-->
+	

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!--
+	5. readonly：设置该标签的参数值只读，用户无法手动更改。 数据是可以提交的
+	6. disabled：设置该标签不可用，参数值无法更改，且参数值也无法提交
+	-->
+	<body>
+		<form>
+			用户名：<input  type="text" name="uname" /><br />
+			密 码 ：<input type="password" name="password"/><br />
+			姓 名 ：<input type="text" name="name" readonly="readonly" value="xxx"/><br />
+			别 名 ：<input type="text" name="name" disabled="disabled" value="ccc"/><br />
+			
+			<input type="submit"/ >
+		</form>
+	</body>
+</html>

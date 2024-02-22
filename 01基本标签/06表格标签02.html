@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!--
+	 1. colspan: 跨列合并单元格
+	 2. rowspan: 跨行合并单元格
+	 3. 确定合并哪几个单元格，确定是跨列合并还是跨行合并
+	 4. 在第一个出现的单元格上书写 合并单元格属性
+	 5. 合并几个单元格属性值就书写几
+	 6. 被合并的单元格必须删掉!!!!!!
+	
+	 
+	 -->
+	<body>
+		<table border="1px" width="100%">
+			<tr>
+				<td colspan="2">1</td>
+				
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>			
+			<tr>
+				<td rowspan="2">6</td>
+				<td>7</td>
+				<td colspan="2" rowspan="2">8</td>
+				
+				<td>10</td>
+			</tr>
+			<tr>
+				
+				<td>12</td>
+				
+				
+				<td>15</td>
+			</tr>
+		</table>
+	</body>
+</html>

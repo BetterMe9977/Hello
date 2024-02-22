@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!--
+	<input /> 标签   用户可以在该标签上 通过填写和选择 进行数据的输入
+	1. type： 设置该标签的种类
+		text： 文本框。默认
+		password： 密码框。 非明文
+		radio： 单选框。  在同一组内有单选效果，分组用到name，name属性值相同
+		checkbox： 复选框
+		submit： 提交按钮。用于控制表单提交数据
+		reset： 重置按钮。用于将表单输入恢复到默认状态
+		file：附件框。用于文件上传
+		hidden：隐藏域。一般用于提交服务器需要拿到，但用户不需要看到的数据
+		button：普通按钮
+	2. name：单选框，复选框进行数据的分组。/  设置该标签对应的参数名
+	3. value：设置该标签对应的 参数值
+	4. checked：设置单选框，复选框的默认选中状态
+	5. readonly：设置该标签的参数值只读，用户无法手动更改
+	6. disabled：设置该标签不可用，参数值无法更改，且参数值也无法提交
+			
+	-->
+	<body>
+		<!--
+			提交数据时出现的  ？sex=on  表示：  ？参数列表
+			参数列表格式：
+				参数1=参数值1&参数2=参数值2&参数3=参数值3
+				
+			on表示选中
+			？sex=on
+			
+			单选框： 用户只能选择，不能输入，指定value属性值
+			文本框，用户可以自由输入，不一定指定value属性
+			单选框，为防止是on，所以设置一个value属性，为便利设置一个默认选中
+		-->
+		<form> 
+			用户名：<input type="text" name="username"/> <br />
+			密   码：<input type="password" name="password"/> <br />
+			性   别：<input type="radio" name="sex" value="man" checked="checked"/> 男
+					<input type="radio" name="sex" value="women"/> 女
+					<!--<input type="radio" name="sex2"/> 公
+					<input type="radio" name="sex2"/> 母 -->
+					
+			<br />
+			<input type="submit" />
+			
+			
+		</form>
+	</body>
+</html>

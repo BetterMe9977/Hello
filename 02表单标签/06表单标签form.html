@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+			<form action="demo.html" method="get">
+				<input type="text" name="uname"/>
+				<input type="submit"/>
+			</form>
+			
+			<br />
+			
+			<form action="demo.html" method="post">
+				<input type="text" name="uname"/>
+				<input type="submit"/>
+			</form>
+		</body>
+	</html>
+	<!--
+	表单标签
+	<form></form>标签
+	用于在效果中定义一个表单，提交用户填写的数据
+	1.action：将数据提交到何处
+			默认提交到本页
+			本机内网路径：
+				绝对路径：不推荐
+				相对路径
+			互联网路径：http://
+			
+			
+	
+	2. method：将数据以何种方式提交
+			默认：get
+			get：把提交数据拼接到地址栏上
+			post： 没有把条数据没有拼接到地址栏上，在请求体
+			
+		get 和 post 区别
+			1. get提交数据拼接到地址栏上，post没有
+			2. get方式提交数据 敏感信息不安全，  post相对安全
+			3. get方式提交的数据量有限， post提交数据无限大
+			
+		推荐 使用post方式	
+			
+	提交数据 URL编码		
+	1. 先普通编码，编码成字节数组（使用页面规定的字符集）
+	2. 字节数组中的每一个元素，都会从10进制，转为16进制
+	3. 把转成的16进制字节数组，以%进行拼接成字符串
+	这就是URL编码后的结果
+	
+	
+	
+	
+	-->
