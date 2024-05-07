@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//变量 可以重复使用同一个数据;可以发生变化
+			var str = "hello world!";
+			alert(str);
+			alert(str);
+			alert(str);
+			alert(str);
+			alert("hello world!")
+			//赋值运算符 var是用来定义变量的variable
+			var score = 0;
+			score = 30;
+			score = 40;
+			alert(score);
+			
+			//
+			var score;
+			alert(score);//变量被声明，但是没有赋值，undefined
+			score = 30;//变量第一次被赋值的时候 初始化
+			
+			//可以不声明直接赋值使用
+			score = 0;			
+			alert(score);
+			
+			//可以存储任意类型
+			score = 0;
+			alert(score);
+			score = "kk";
+			alert(score);
+			
+			var a = 100; var b = 30; var c = 20;
+			//简洁方式
+			var a = 10,b = 20,c = 30; 
+			alert(a);
+			alert(b);
+			alert(c);
+			
+			//js变量命名规则
+			//1.变量必须以字母开头
+			//2.可以$ _ 开头
+			//3.大小写敏感
+			//4.不能使用关键字
+			
+			//var 1a = 10;  No identifiers allowed directly after numeric literal
+			var a1 = 10;
+			// var var = 10; Cannot use the keyword 'var' as a variable name.
+			var str = typeof(a1);
+			alert(str);
+			
+			console.log(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
