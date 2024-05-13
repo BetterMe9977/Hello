@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var str = "hello world";
+	
+			//取得字符串长度
+			console.log(str.length);  //包含空格
+			
+			//利用索引访问单个字符
+			console.log((str[0]));
+			console.log(str[1]);
+			console.log(str[6]);
+			str[5] = "-"; // 不能通过这种方式来修改字符
+			console.log(str);
+			
+			//遍历
+			for(var i = 0;i<str.length;i++){
+				console.log(str[i]);
+			}
+			
+			//将字符串字符全部转换成大写，小写
+			var str2 = str.toUpperCase();
+			console.log(str);
+			console.log(str2);
+			
+			var str3 = str2.toLowerCase();
+			console.log(str3);
+			
+			var str = "hello world";
+			str = str + " big"; //str指向了新的字符串
+			console.log(str);	
+			
+			// var index = str.indexOf(hello);
+			// console.log(str.indexOf(h));console.log(str.indexOf(h));
+			var str4 = str + ".com";
+			console.log(str4);
+			var str5 = str.concat(".com","!");
+			console.log(str5);
+			var str6 = str.slice(2,4);  //前闭后开
+			console.log(str6);
+			var str7 = str.slice(2);  // 从2到结尾
+			console.log(str7);
+			var str8 = str.slice(5,2);  //非法的输出 空
+			console.log(str8);
+			var str9 = str.slice(2,20);  // 结尾超过没有影响
+			console.log(str9);
+			var str10 = str.slice(-4,-2);  //前闭后开
+			console.log(str10);
+			
+			var str11 = str.substring(2,5);
+			console.log(str11);
+			var str12 = str.substring(2);
+			console.log(str12);
+			var str13 = str.substring(5,2); //自动变成2-5
+			console.log(str13);
+			var str14 = str.substring(-4,-2);  //前闭后开
+			console.log(str14); //(0,0) 空
+			
+			var str15 = str.substr(2,4);  // 前为开始索引，后为个数
+			console.log(str15);
+			
+			var str16 = str.split(" ");  //以什么字符串拆分
+			console.log(str16);
+			
+			var str17 = str.split(" ",2);  //以什么字符串拆分，个数
+			console.log(str17);
+			
+			var username = " tom ";
+			var newStr = username.trim();
+			console.log(username);
+			console.log(newStr);
+			
+			
+						 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

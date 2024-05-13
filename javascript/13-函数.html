@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			function myname(){ //函数命名
+				console.log("我是函数体");
+			}
+			myname();  //函数调用
+			
+			console.log("第1次调用！")
+			datecheck();
+			console.log("第2次调用！")
+			datecheck();
+			function datecheck(){ 
+				console.log("数据校验第一步");
+				console.log("数据校验第二步");
+				console.log("数据校验第三步");
+				console.log("数据校验第四步");
+			}
+			console.log("第3次调用！")
+			datecheck();
+			console.log("第4次调用！")
+			datecheck();
+			console.log("第5次调用！")
+			datecheck();
+			
+			
+			function add1(){
+				var a = 100;
+				var b = 200;
+				var res1 = a + b;
+				console.log(res1);
+			}
+			add1();
+			
+			//	名字 参数 返回值
+			function add2(arg1,arg2){
+				var res2 = arg1 + arg2;
+				console.log(res2);
+			}
+			add2(100,200);
+			add2(80,90);
+			
+			function add3(arg1,arg2){
+				var res = arg1 + arg2;
+				return res;
+			}
+			var res3 = add3(40,20);
+			var res4 = add3(50,60);
+			console.log(res3);
+			console.log(res4);
+			
+			
+			//匿名函数
+			var a = function(){
+				console.log("我是匿名函数");
+			}
+			a();
+			
+			// function attack(){
+			// 	console.log("我使用刀攻击");
+			// 	console.log("掉血");
+			// }
+			// attack();
+			
+			function attack(attackmode){
+				attackmode();
+				console.log("掉血");
+			}
+			
+			attack(function(){
+				console.log("我使用刀攻击");
+			});
+			attack(function(){
+				console.log("我使用枪攻击");
+			});
+			
+			
+			window.alert("hello! 1");  //	弹出框
+			console.log("hello! 2");  	//控制台
+			document.write("hello 3");	//网页
+			
+			//代码重复
+			//不方便维护
+			
+			//第一次校验
+			console.log("数据校验第一步");
+			console.log("数据校验第二步");
+			console.log("数据校验第三步");
+			console.log("数据校验第四步");
+			
+			//第二次校验
+			console.log("数据校验第一步");
+			console.log("数据校验第二步");
+			console.log("数据校验第三步");
+			console.log("数据校验第四步");
+			
+			//第三次校验
+			console.log("数据校验第一步");
+			console.log("数据校验第二步");
+			console.log("数据校验第三步");
+			console.log("数据校验第四步");
+			
+		</script>	
+	</head>
+	<body>
+	</body>
+</html>
