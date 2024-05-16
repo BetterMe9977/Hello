@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			//  ^a : 	以a字母开头
+			var p1 = /^a/;
+			console.log(p1.test("bca"));
+			console.log(p1.test("abca"));
+			
+			//  a$ : 	以a字母结尾
+			var p2 = /a$/;
+			console.log(p2.test("bc"));
+			console.log(p2.test("abca"));
+			
+			//  ^a$ : 	以a字母开头,以a字母结尾,并且只有一个a
+			var p3 = /^a$/;
+			console.log(p3.test("bca")); //false
+			console.log(p3.test("abca")); //false
+			console.log(p3.test("a")); //true
+			console.log(p3.test("aaa")); //false
+			
+			//  [] 	里面内容是或的关系
+			console.log("[] 1");
+			var p4 = /[1234]/;    
+			console.log(p4.test("1")); //true
+			console.log(p4.test("2"));//true
+			console.log(p4.test("3"));//true
+			console.log(p4.test("4"));//true
+			console.log(p4.test("5"));//false
+			console.log(p4.test("125")); //true
+			
+			console.log("[] 2");
+			var p5 = /^[1234][1234]$/;   //  两个 1-4 的数字
+			console.log(p5.test("1")); //true
+			console.log(p5.test("23"));//true
+			console.log(p5.test("233"));//false
+			
+			console.log("[] 3");
+			var p5 = /^[1-4]$/;  // 1-4 一个数字
+			console.log(p5.test("1")); //true
+			console.log(p5.test("23"));//false
+			console.log(p5.test("233"));//false
+			
+			console.log("[] 4");
+			var p6 = /^[a-z]$/;   // a-z 一个字母
+			console.log(p6.test("1")); //false
+			console.log(p6.test("a"));//true
+			console.log(p6.test("am"));//false
+			
+			console.log("\\d");
+			var p7 = /\d/; // \d :  0-9
+			console.log(p7.test("0"));
+			console.log(p7.test("1"));
+			console.log(p7.test("9"));
+			console.log(p7.test("11"));
+			console.log(p7.test("a"));
+			console.log(p7.test("ak"));
+			
+			//正整数
+			console.log("正整数");
+			// 1-9  0-9  *:0-多个
+			var p8 = /^[1-9]\d*$/;
+			console.log(p8.test("10"));
+			console.log(p8.test("29"));
+			console.log(p8.test("222"));
+			console.log(p8.test("0199"));
+			console.log(p8.test("-098"));
+			console.log(p8.test("2980"));
+			
+			//*:0-多个
+			console.log("*"); 
+			var p9 = /^a*/;
+			console.log(p9.test("a"));
+			console.log(p9.test(""));
+			console.log(p9.test("0"));
+			console.log(p9.test("aa"));
+			console.log(p9.test("aaa"));
+			console.log(p9.test("b"));
+			
+			//+: 1-多个
+			console.log("+"); 
+			var p9 = /^a+/;
+			console.log(p9.test("a"));
+			console.log(p9.test(""));
+			console.log(p9.test("0"));
+			console.log(p9.test("aa"));
+			console.log(p9.test("aaa"));
+			console.log(p9.test("b"));
+			
+			console.log("------"); 
+			var p10 = /^[1-9][0-9]+$/;
+			console.log(p10.test("a"));
+			console.log(p10.test("06"));
+			console.log(p10.test("123"));
+			console.log(p10.test("67854"));
+			console.log(p10.test("b54j"));
+			
+			//\w	匹配包括下划线的任何单词字符。等价于“[A-Za-z0-9_]"。
+			//\W	匹配任何非单词字符。等价于“[^A-Za-z0-9_]"。
+			
+			//  /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/
+			//  \w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+			
+			var p11 = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+			console.log(p11.test(abcd.qq.com));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

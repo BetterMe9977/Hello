@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript"> 
+			// key value 键值对
+			user1 = {
+				name:"kiki",
+				age:18,
+				sex:"women",
+			};
+			
+			console.log(user1.name);
+			console.log(user1.age);
+			console.log(user1.sex);
+			
+			user1.name = "alen";
+			console.log(user1.name);
+			
+			var user2 = new Object();
+			user2.name = "jojo";
+			user2.age = 20;
+			user2.sex = "women";
+			console.log(user2.name);
+			console.log(user2.age);
+			console.log(user2.sex);
+			
+			user2.name = "alen";
+			console.log(user2.name);
+			
+			// 构造函数创建对象
+			user3 = {
+				name:"kiki",
+				age:18,
+				sex:"women",
+			};
+			user2 = {
+				name:"kiki",
+				age:18,
+				sex:"women",
+			};
+			function user(name,age,sex){
+				this.name = name;
+				this.age = age;
+				this.sex = sex;
+				
+				this.show = function show(){
+					console.log(this.name+";"+this.age+";"+this.sex);
+				}
+				this.setAge = function(age){
+					this.age = age;
+				}
+			}
+			user5 = new user("jack",29,"man");
+			user6 = new user("tom",25,"man");
+			
+			user6.setHobby = function(hobby){
+				this.hobby = hobby;
+				//this.name = name;
+			}
+			console.log(user5.name);
+			console.log(user5.age);
+			console.log(user5.sex);
+			console.log(user6.name);
+			console.log(user6.age);
+			console.log(user6.sex);
+			user5.show();
+			user6.show();
+			user5.setAge(22);
+			console.log(user5.age);
+			user6.setHobby("reading");
+			console.log(user6.hobby);
+			
+			console.log(user6.name);
+			console.log((user6[name])); //undefined
+			console.log((user6["name"])); //属性要加“”  键值对
+			
+			//遍历
+			console.log("---遍历----")
+			for(key in user6){
+				console.log(key + "：" + user3[key]);
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

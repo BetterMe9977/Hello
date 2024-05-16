@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var p1 = /xxxx/; 
+			
+			//搜索 替换 判断
+			//   /正则表达式主体/修饰符
+			// i:忽略大小写 g:匹配全局  m:执行多行匹配
+			var p1 = /ab/ig;   //i 不区分大小写
+			var str = "hello aBove Ab";
+			var index = str.search(p1);
+			console.log(index);
+			
+			var index = str.search("ab"); //不存在返回-1
+			console.log(index);
+			var index = str.search("aB");
+			console.log(index);
+			
+			var str2 = str.replace("aB","--");
+			console.log(str2);
+			
+			var str3 = str.replace(p1,"--");
+			console.log(str3);
+			
+			var str4 = str.replace("aB","--");
+			console.log(str4);
+			
+			var res = p1.test(str);
+			console.log(res);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
