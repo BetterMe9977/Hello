@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var div = document.getElementById("one");
+			console.log(div);
+		</script>
+	</head>
+	<body>
+		
+		<div id="one">
+			<span> DOM：文档对象模型Document Object Model </span>
+		</div>
+		
+		<div class="two">
+			<span> DOM：文档对象模型Document Object Model </span>
+		</div>
+		
+		<div class="two" name="last">
+			<span> DOM：文档对象模型Document Object Model </span>
+		</div>
+		
+		<p id="three" class="two" name="last" >
+			<font id="myfont" size="6">父标签和子标签</font> 
+		</p>
+		
+
+		
+	</body>
+</html>
+<script type="text/javascript">
+			//1. 通过id
+			var div = document.getElementById("one");
+			console.log(div); 
+			
+			// 2.通过tagname 标签名
+			var div = document.getElementsByTagName("div");
+			console.log(div); //HTMLCollection(3)
+			
+			//通过document搜索整个网页
+			//通过标签名可搜索这个对象中的所有自标签
+			var div = document.getElementById("one");
+			var arr1 = div.getElementsByTagName("span");
+			console.log(arr1); //HTMLCollection [span]
+				
+			//3.通过类名
+			var arr2 = document.getElementsByClassName("two");
+			console.log(arr2); //HTMLCollection(3) [div.two, div.two, p.two]
+			
+			//4.通过标签的name值来查找
+			var arr3 = document.getElementsByName("last");
+			console.log(arr3); //NodeList(2) [div.two, p.two]
+			
+			//操作
+						
+			//1. 设置属性
+			var myfont = document.getElementById("myfont");
+			myfont.setAttribute("color","green");
+			var size = myfont.getAttribute("size");
+			console.log(typeof(size)); //string
+			console.log(size);
+			
+			//2. 设置内容
+			// var p = document.getElementById("three");
+			// p.innerText="jojo"; //只能修改文本
+			// p.innerHTML="<font color='red'>kiki</font>"; 		
+		
+			//3.设置css样式
+			//style="font-family:幼圆 ;"
+			//style="font-family: 'Times New Roman', Times, serif;"
+			myfont.setAttribute("style","font-family: 'Times New Roman', Times, serif;")
+		</script>
+		

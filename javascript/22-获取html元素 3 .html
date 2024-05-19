@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var div = document.getElementById("one");
+			console.log(div);
+		</script>
+	</head>
+	<body>
+		
+		<div id="one">
+			<span> DOM：文档对象模型Document Object Model </span>
+		</div>
+		
+		<div class="two">
+			<span> DOM：文档对象模型Document Object Model </span>
+		</div>
+		
+		<div class="two" name="last">
+			<span> DOM：文档对象模型Document Object Model </span>
+		</div>
+		
+		<p id="three" class="two" name="last" >
+			<font id="myfont" size="6">父标签和子标签</font> 
+		</p>
+		
+		<a href="#" id="mya">进入google</a>
+		<img src="img/1.png" id="myimg"/>
+		
+		<input type="checkbox" is="mycheckbox"/>
+		
+		<div id="mydiv">
+			网页加载
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var mya = document.getElementById("mya");
+	var myimg = document.getElementById("myimg");
+	var mycheckbox = document.getElementById("mycheckbox");
+	
+	mya.setAttribute("href","https://www.google.co.jp/");
+	myimg.setAttribute("src","img/3.png");
+	//mycheckbox.setAttribute("checked","true");
+	// or
+	mya.href = "https://www.google.co.jp/";
+	myimg.src = "src","img/3.png";
+	//mycheckbox.checked = true;		
+	
+	//
+	mydiv = document.getElementById("mydiv");
+	mydiv.style.fontSize="20px";
+	mydiv.style.color="pink";
+		
+</script>
+		

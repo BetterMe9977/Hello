@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body onload="init()" onunload="unload()">
+		<!-- 通过 onclick属性添加事件 -->
+		<div onclick="console.log('我被点击了!');">DOM事件</div>
+		<div onclick="divClick()"">DOM事件div</div>
+		<span id="myspan">DOM事件</span>
+		<p onmouseover="console.log(onmouseover)" onmouseout="console.log('鼠标划出')"
+		onmousedown="console.log('鼠标按下')" onmouseup="console.log('鼠标抬起')">	DOM p</p>
+		<font>DOM事件</font>
+		<a href="">DOM事件a</a>
+		
+		<input type="text" onchange="inputChange(this)"/>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	function init(){
+		console.log("网页加载完成！");
+	}
+	function unload(){
+		alert("网页被卸载");
+	}
+	
+	function inputChange(input){
+		console.log("用户输入的内容发生变化" + input.value);
+	}
+	
+	function divClick(){
+		console.log("div被点击了");
+	}
+	
+	var myspan = document.getElementById("myspan");
+	myspan.onclick = function(){
+		console.log("span被点击了");
+	}
+	// or
+	myspan.addEventListener("click",spanClick);
+	function spanClick(){
+		console.log("span被点击了！！！");
+	}
+	//使用匿名函数
+	myspan.addEventListener("click",function(){
+		console.log("span被点击了again ！！！");
+	});	
+</script>
