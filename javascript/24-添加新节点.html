@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="mydiv">
+			<span>第一个span</span>
+			<span>第二个span</span>
+			<span>第三个span</span>
+			<span>第四个span</span>
+			<p id="myp">我是p标签</p>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	//添加
+	myp = document.getElementById("myp")
+	myp.innerHTML = "<span>第五个span</span>"
+	mydiv = document.getElementById("mydiv");
+	
+	var newSpan = document.createElement("span");
+	// 方式1
+	mydiv.appendChild(newSpan);
+	newSpan.innerText="我是第五个span";
+	
+	// 方式2
+	var textNode = document.createTextNode("我是  第五个span!!! ");
+	newSpan.appendChild(textNode);
+	mydiv.appendChild(newSpan);
+	
+	//删除
+	mydiv.removeChild(myp);
+	
+	
+</script>

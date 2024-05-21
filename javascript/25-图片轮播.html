@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 900px;
+				height: 400px;
+				margin: 0 auto
+			}
+			div img{
+				width:900px;
+				height:400;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			function init(){
+				//window.setTimeout(changeImg,2000);	
+				window.setInterval(changeImg,2000);
+			}
+			var index = 1;
+			function changeImg(){
+				nextImg();
+			}
+			function preImg(){
+				var myimg = document.getElementById("myimg");
+				index --;
+				if(index<1){
+					index = 2;
+				}
+				myimg.src="img/" + index + "_.jpg";
+			}
+			function nextImg(){
+				var myimg = document.getElementById("myimg");
+				index ++;
+				if(index>2){
+					index = 1;
+				}
+				myimg.src="img/" + index + "_.jpg";
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<p align="center"> 
+		<button onclick="preImg()">上一张</button>
+		<button onclick="nextImg()">下一张</button>
+		</p>
+		
+		<div>
+			<img src="img/1_.jpg" id="myimg"/>
+		</div>
+	</body>
+</html>
