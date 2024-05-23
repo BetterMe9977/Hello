@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//window浏览器窗口
+			var name = "kiki";   
+			//定义变量在window里， name就是window的一个属性
+			console.log(window.name);
+			
+			// window.document.getElementById();
+			// //window 可以省略
+			// document.getElementById();
+			
+			// //window代表整个浏览器窗口，
+			// //ducument代表整个网页 body 网页位于窗口里
+			
+			// window.alert();
+			// window.setInterval();
+			// window.setTimeout();
+			
+			//弹出一个确认框  window.confirm()
+			var res = window.confirm("确定吗");
+			console.log(res);
+			
+			//弹出一个输入框window.prompt
+			var res2 = window.prompt("请输入你的姓名: ");
+			console.log(res2);
+			
+			
+			function myOpen(){
+				var w = window.open("https://www.google.co.jp","new-window","width=500,heigth=500");
+				w.resizeTo(300,300);
+				w.moveTo(500,500);
+				w.focus();
+			}
+			
+			console.log(screen.availWidth);
+			console.log(screen.availHeight);
+			
+			console.log(location.protocol);		
+			console.log(location.hostname);
+			console.log(location.port);
+			console.log(location.pathname);
+			
+			//自动跳转
+			location.assign("http://www.amazon.co.jp");
+			
+						
+			
+		</script>		
+			
+	</head>
+	<body>
+	
+		<button onclick="myOpen()">打开</button>
+	</body>
+</html>
