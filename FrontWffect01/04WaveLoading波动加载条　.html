@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			.top{
+				display: flex;
+				height: 50vh;
+				background-color: darkgreen;
+			}
+			.bottom{
+				display: flex;
+				height: 50vh;
+				background-color: deepskyblue;
+				blue;
+			}
+			.loading{
+				/* 为了实现弹性盒子上下左右居中 */
+				margin: auto;
+			}
+			/* 加载条的样式 */
+			.loading>span{
+				display: inline-block;
+				width:20px;
+				height:100px;
+				background-color: white;
+				border-radius: 10px;
+				margin-left: 5px;
+				margin-right: 5px;
+				animation: spanHeight 1s infinite;
+				/* 使文字底边对齐 */
+				position: relative;
+			}
+			/* 添加伪元素，防止DIV抖动 */
+			.loading::after{
+				content: "";
+				height: 100px;
+				width: 0px;
+				background-color: red;
+				display: inline-block;
+			}
+			/* 让收盘标签高度发生变化的关键帧动画 */
+			@keyframes spanHeight{
+				0%{
+					height: 20px;
+				}
+				50%{
+					height: 100px;
+				}
+				100%{
+					height: 20px;
+				}
+			}
+			.loading>span:nth-of-type(2){
+				animation-delay: 0.1s;
+			}
+			.loading>span:nth-of-type(3){
+				animation-delay: 0.2s;
+			}
+			.loading>span:nth-of-type(4){
+				animation-delay: 0.3s;
+			}
+			.loading>span:nth-of-type(5){
+				animation-delay: 0.4s;
+			}
+			.loading>span:nth-of-type(6){
+				animation-delay: 0.5s;
+			}
+			.loading>span:nth-of-type(7){
+				animation-delay: 0.6s;
+			}
+			.loading>span:nth-of-type(8){
+				animation-delay: 0.7s;
+			}
+			.loading>span:nth-of-type(9){
+				animation-delay: 0.8;
+			}
+			.loading>span:nth-of-type(10){
+				animation-delay: 0.9s;
+			}
+			/* 中线对齐 */
+			.load2>span{
+				vertical-align: middle;
+			}
+			/* 上边线对齐 */
+			.load3>span{
+				vertical-align: top;
+			}
+			/* 上边线对齐 */
+			.load4>span{
+				vertical-align: top;
+				background-color: transparent;
+				
+			}
+			/* 让文字居中以及底边对齐 */
+			.loading>span>div{
+				text-align: center;
+				font-size: 20px;
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+			}
+			.load4>span>div{
+				font-size: 40px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="loading load1">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				
+			</div>
+			<div class="loading load2">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="loading load3">
+				<span><div>L</div></span>
+				<span><div>o</div></span>
+				<span><div>a</div></span>
+				<span><div>d</div></span>
+				<span><div>i</div></span>
+				<span><div>n</div></span>
+				<span><div>g</div></span>
+				<span><div>.</div></span>
+				<span><div>.</div></span>
+				<span><div>.</div></span>
+				
+			</div>
+			<div class="loading load4">
+				<span><div>L</div></span>
+				<span><div>o</div></span>
+				<span><div>a</div></span>
+				<span><div>d</div></span>
+				<span><div>i</div></span>
+				<span><div>n</div></span>
+				<span><div>g</div></span>
+				<span><div>.</div></span>
+				<span><div>.</div></span>
+				<span><div>.</div></span>
+				
+			</div>
+		</div>
+	</body>
+</html>

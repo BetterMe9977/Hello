@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>炫酷的复选框按钮</title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			body{
+				width: 100%;
+				height: 100vh;
+				background-color: lightskyblue;
+				display: flex;
+			}
+			.my-checkbox{
+				display: block;
+				width: 200px;
+				height: 80px;
+				/* 复选框左右居中 margin auto */
+				margin: auto;
+				/* 隐藏复选框默认的效果 */
+				-webkit-appearance:  none;
+				-moz-appearance: none;
+				outline: none;
+				
+				/* 编自己的样式: 边框； 圆角； 渐变色； 阴影 */
+				border: 5px solid #888888;
+				border-radius: 40px;
+				background: linear-gradient(to bottom,#5b5b5b,#f0f0f0);
+				box-shadow: 8px 6px 20px #888888,inset 5px -5px 30px #333333;
+				position: relative;
+				transition: 0.5s;
+			}
+			/* 滑动纽大的灰色部分 */
+			.my-checkbox::before{
+				display: block;
+				content: "";
+				width: 120px;
+				height: 60px;
+				background: linear-gradient(to top,#000,#6b6b6b);
+				border: 5px solid #555555;
+				border-radius: 35px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				transition: 0.5s;
+				
+			}
+			/* 滑动纽小的亮光部分 */
+			.my-checkbox::after{
+				display: block;
+				content: "";
+				width: 10px;
+				height: 10px;
+				background: darkgray;
+				border-radius: 50%;
+				transform: translate(0,-50%);
+				position: absolute;
+				left: 90px;
+				top: 50%;
+				transition: 0.5s;
+				box-shadow: 0 0 0px deepskyblue;
+			}
+			
+			/* 复选框选中后按钮的样式 */
+			.my-checkbox:checked::before{
+				left:60px;
+			}
+			/* 复选框选中后小黑点的样式 */
+			.my-checkbox:checked::after{
+				left:150px;
+				background-color: deepskyblue;
+				box-shadow: 0 0 15px deepskyblue;
+			}
+			/* 复选框选中后大背景的样式 */
+			.my-checkbox:checked{
+				border: 5px solid deepskyblue;
+				background: linear-gradient(to bottom,#00aeae,#a6ffff);
+				box-shadow: 8px 6px 20px #888888,inset 5px -5px 30px #007979;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" class="my-checkbox"/>
+	</body>
+</html>

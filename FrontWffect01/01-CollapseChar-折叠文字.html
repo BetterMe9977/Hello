@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>被折叠隐藏的字符</title>
+		<style>
+			
+			*{margin: 0px;padding: 0px;}
+			body{
+				background-color: aquamarine;
+				width: 100%;
+				height: 100vh;
+				display: flex;
+			}
+			#cha1{
+				/* width: 100px;
+				height: 100px; */
+				background-color: red;
+				margin: auto;
+				border-radius: 85px;
+				padding-left: 50px;
+				padding-right: 50px;
+			}			
+			.my-span{
+				color: white;
+				font-size: 130px;
+				display: inline-block;
+				/* 添加样式数值在变化时候的过渡效果 */
+				transition: 1s;			
+			}
+		/* 	隐藏字母的样式 */
+			.my-hide{
+				opacity: 0;
+				width: 0px;
+				
+			}
+			/* div 的悬浮事件，控制其子元素  > 控制直接子元素
+			当鼠标悬浮在div上时候，显示隐藏的span标签*/
+			#cha1:hover>span.my-hide{
+				opacity: 1;
+				width: 70px;
+				/* auto 不能逐渐过度*/
+				/* width: auto; */
+			}
+		</style>
+	</head>		
+	<body>
+		<div id="cha1">
+			<span class="my-span">J</a></span>
+			<span class="my-span my-hide">a</span>
+			<span class="my-span my-hide">v</span>
+			<span class="my-span my-hide">a</span>
+			<span class="my-span">E</span>
+			<span class="my-span my-hide">E</span>			
+		</div>
+	</body>
+</html>

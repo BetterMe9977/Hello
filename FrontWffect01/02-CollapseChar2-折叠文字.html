@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>被折叠隐藏的字符</title>
+		<style>
+			
+			*{margin: 0px;padding: 0px;}
+			
+			.cha1{
+				/* width: 100px;
+				height: 100px; */
+				background-color: red;
+				margin: auto;
+				border-radius: 85px;
+				padding-left: 50px;
+				padding-right: 50px;
+			}			
+			.my-span{
+				color: white;
+				font-size: 130px;
+				display: inline-block;
+				/* 添加样式数值在变化时候的过渡效果 */
+				transition: 1s;			
+			}
+		/* 	隐藏字母的样式 */
+			.my-hide{
+				opacity: 0;
+				width: 0px;
+				
+			}
+			/* div 的悬浮事件，控制其子元素  > 控制直接子元素
+			当鼠标悬浮在div上时候，显示隐藏的span标签*/
+			.cha1:hover:hover>span.my-hide{
+				opacity: 1;
+				width: 70px;
+				/* auto 不能逐渐过度*/
+				/* width: auto; */
+			}
+			
+			.my-div-top{
+				width: 100%;
+				height: 50vh;
+				background-color: lightblue;
+				display: flex;
+			}
+			.my-div-bottom{
+				width: 100%;
+				height: 50vh;
+				background-color: lightgreen;
+				display:flex;
+			}
+			.my-fix-width{
+				width: 640px;
+				text-align: center;
+			}
+		</style>
+	</head>		
+	<body>
+		<div class="my-div-top">
+			<div class="cha1">
+				<span class="my-span">H</a></span>
+				<span class="my-span my-hide">e</span>
+				<span class="my-span my-hide">l</span>
+				<span class="my-span my-hide">l</span>
+				<span class="my-span">o</span>
+					
+			</div>
+			<div class="cha1">
+				<span class="my-span">W</a></span>
+				<span class="my-span my-hide">o</span>
+				<span class="my-span my-hide">r</span>
+				<span class="my-span my-hide">l</span>
+				<span class="my-span">d</span>		
+			</div>
+		</div>
+		<div class="my-div-bottom ">
+			<div class="cha1 my-fix-width">
+				<span class="my-span">H</a></span>
+				<span class="my-span my-hide">o</span>
+				<span class="my-span my-hide">n</span>
+				<span class="my-span my-hide">e</span>
+				<span class="my-span">y</span>		
+			</div>
+		</div >
+		
+		
+	</body>
+</html>
