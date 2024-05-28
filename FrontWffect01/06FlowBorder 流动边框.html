@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>流光溢彩的边框</title>
+		<style>
+			*{padding: 0px; margin: 0px;}
+			body{
+				height: 100vh;
+				background-color: black;
+				display: flex;
+			}
+			
+			/* 按钮根div的样式 */
+			.my-btn{
+				font-size: 50px;
+				padding: 5px 50px;
+				background: linear-gradient(45deg,lightgreen,lightblue,lightgoldenrodyellow);
+				margin: auto
+				position: relative;
+				overflow: hidden;
+			}
+			/* top */
+			.my-top{
+				width: 100%;
+				height: 3px;
+				position: absolute;
+				top: 0px;
+				left: -100%;
+				background: linear-gradient(to right,transparent,lightcoral,deepskyblue,blue,transparent);
+				animation: animateBorderTop 2s infinite linear;
+			}
+			@keyframes animateBorderTop {
+				from{
+					left: -100%;
+				}
+				to{
+					left: 300%;
+				}
+			}
+			
+			/* right */
+			.my-right{
+				width: 3px;
+				height: 100%;
+				position: absolute;
+				top: -100%;
+				right: 0px;
+				background: linear-gradient(to bottom,transparent,lightcoral,deepskyblue,blue,transparent);
+				animation: animateBorderRight 2s infinite linear;
+				animation-delay: 0.5s;
+			}
+			@keyframes animateBorderRight {
+				from{
+					top: -100%;
+				}
+				to{
+					top: 300%;
+				}
+			}
+			
+			/* bottom */
+			.my-bottom{
+				width: 100%;
+				height: 3px;
+				position: absolute;
+				bottom: 0px;
+				left: 100%;
+				background: linear-gradient(to left,transparent,lightcoral,deepskyblue,blue,transparent);
+				animation: animateBorderBottom 2s infinite linear;
+				animation-delay: calc(0.5s * 2);
+			}
+			@keyframes animateBorderBottom {
+				from{
+					left: 100%;
+				}
+				to{
+					left: -300%;
+				}
+			}
+			
+			/* left */
+			.my-left{
+				width: 3px;
+				height: 100%;
+				position: absolute;
+				top: 100%;
+				left: 0%;
+				background: linear-gradient(to top,transparent,lightcoral,deepskyblue,blue,transparent);
+				animation: animateBorderLeft 2s infinite linear;
+				animation-delay: calc(0.5s * 3);
+			}
+			@keyframes animateBorderLeft {
+				from{
+					top: 100%;
+				}
+				to{
+					top: -300%;
+				}
+			}
+			/* 去掉按钮的流动动画 */
+			.my-hover>div{
+				animation: none;
+				/* animation-delay: calc(0.5s * 3); */
+			}
+			/* 悬浮的时候为四个边添加动画 */
+			.my-hover:hover>.my-top{
+				animation: animateBorderTop 0.2s 1 linear;
+				animation-delay: calc(0.1s * 0);
+			}
+			.my-hover:hover>.my-right{
+				animation: animateBorderRight 0.2s 1 linear;
+				animation-delay: calc(0.1s * 1);
+			}
+			.my-hover:hover>.my-bottom{
+				animation: animateBorderBottom 0.2s 1 linear;
+				animation-delay: calc(0.1s * 2);
+			}
+			.my-hover:hover>.my-left{
+				animation: animateBorderLeft 0.2s 1 linear;
+				animation-delay: calc(0.1s * 3);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="my-btn">
+			登录
+			<div class="my-top"></div>
+			<div class="my-right"></div>
+			<div class="my-bottom"></div>
+			<div class="my-left"></div>
+		</div>
+		
+		
+		<div class="my-btn my-hover">
+			注册
+			<div class="my-top"></div>
+			<div class="my-right"></div>
+			<div class="my-bottom"></div>
+			<div class="my-left"></div>
+		</div>
+	</body>
+</html>

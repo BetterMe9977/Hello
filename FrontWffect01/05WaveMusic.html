@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			.top{
+				display: flex;
+				height: 50vh;
+				background-color: darkgreen;
+			}
+			.bottom{
+				display: flex;
+				height: 50vh;
+				background-color: deepskyblue;
+				blue;
+			}
+			.loading{
+				/* 为了实现弹性盒子上下左右居中 */
+				margin: auto;
+			}
+			/* 加载条的样式 */
+			.loading>span{
+				display: inline-block;
+				width:20px;
+				height:100px;
+				background-color: white;
+				border-radius: 10px;
+				margin-left: 5px;
+				margin-right: 5px;
+				animation: spanHeight 1s infinite;
+				/* 使文字底边对齐 */
+				position: relative;
+			}
+			/* 添加伪元素，防止DIV抖动 */
+			.loading::after{
+				content: "";
+				height: 210px;
+				width: 0px;
+				background-color: red;
+				display: inline-block;
+			}
+			#btn{
+				height: 50px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		</style>
+		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			var analyser = null;
+			var inited = false;
+			$(function(){
+				$("btm").click(function(){
+					// 判断当前浏览器是否支持音频处理
+					if(!(window.AudioContext||window.webkitAudioContext)){
+						alert("当前浏览器不支持音频处理")
+						return;
+					}
+					
+					if(inited == false){
+						inited = true;
+						//创建音频上下文
+						var context = new window.AudioContext;
+						if(context == null) {
+							context = new window.webkitAudioContext;
+						}
+						//创建音频源
+						var source = context.createMediaElementSource($("#player")[0]);
+						
+						//创建媒体解析器
+						analyser = context.createAnalyser();
+						//采样率的设置，数值有要求,必须为2的幂次方
+						analyser.fftsize = 32;
+						
+						// 关联起创建好的对象
+						source.connect(analyser);
+						analyser.connect(context.destination);
+					}
+					
+					// //创建音频上下文
+					// var context = new window.AudioContext;
+					// if(context == null) {
+					// 	context = new window.webkitAudioContext;
+					// }
+					// //创建音频源
+					// var source = context.createMediaElementSource($("#player")[0]);
+					
+					// //创建媒体解析器
+					// analyser = context.createAnalyser();
+					// //采样率的设置，数值有要求,必须为2的幂次方
+					// analyser.fftsize = 32;
+					
+					// // 关联起创建好的对象
+					// source.connect(analyser);
+					// analyser.connect(context.destination);
+					
+					
+					//启动定时器，用于定时刷新立柱的高度
+					setInterval("draw()",50);
+				})
+			})
+			//定时器函数，用于定时刷新立柱的高度
+			function draw(){
+				var arr = new Uint8Array(32);
+				analyser.getByteTimeDomainData(arr);
+				for(var i = 0; i < arr.length; i++){
+					console.log(i + " = " + arr[i]);
+					$(".loading>span").eq(i).height(100*(arr[i]/128.0));
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<audio src="./audio/op.mp3" controls id="player"></audio>
+			<button id="btn">波形跟踪</button>
+		</div>
+		<div class="bottom">
+			<div class="loading load1">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				
+			</div>
+			
+		</div>
+	</body>
+</html>

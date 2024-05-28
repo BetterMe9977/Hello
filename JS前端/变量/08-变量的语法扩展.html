@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			
+			//跟新变量
+			var myname = 'kiki';
+			console.log(myname);
+			myname = 'jojo';
+			console.log(myname);
+			
+			//2. 声明多个变量
+			var age = 18;
+			var address = 'beijing';
+			var sal = 5000;
+			console.log(age + address + sal);
+			// or
+			var age = 28,
+				address = 'beijing',
+				sal = 8000;
+			console.log(age + address + sal);
+			
+			//3.声明变量的特殊情况
+			//3.1 只声明不赋值，结果是undefined 为定义的
+			var sex;
+			console.log(sex);
+			//3.2 不声明 不赋值 直接使用变量 会报错
+			//Uncaught ReferenceError: consol is not defined
+			consol.log(tel);
+			//3.3 不声明 直接赋值使用 可以使用但不建议，会变成全局变量
+			qq = 100;
+			console.log(qq);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
