@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//js 编程语言 有很强的逻辑性在里面：实现这个要求的思路 先怎么做再怎么做
+			//1. 需要一个临时变量
+			//2. 把var1 值 给临时变量temp
+			//3. 把var2 值 给var1
+			//4. 把临时变量temp 值 给var2
+			
+			var temp; //声明一个临时变量为空
+			var app1 = 'red';
+			var app2 = 'blue';
+			//app1 = temp;
+			temp = app1;
+			app1 = app2;
+			app2 = temp;
+			console.log(app1);
+			console.log(app2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
