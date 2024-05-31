@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var flag = true;
+			var flag1 = false;
+			console.log(flag + 1);  // true参与运算时候等于1
+			console.log(flag1 + 1); //false 参与运算等于 0
+			
+			//如果一个变量声明没有赋值，就是undefined 未定义的类型
+			var str;
+			var variable = undefined;
+			// undefined和字符串相加就是undefined+字符串拼接
+			console.log(variable + 'kiki'); //undefinedkiki
+			//undefined 和数字相加 就是 NaN
+			console.log(variable + 1); //NaN
+			
+			//null  空值
+			var space = null;
+			console.log(space + 'kiki'); //nullkiki
+			console.log(space + 1); // 1
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
