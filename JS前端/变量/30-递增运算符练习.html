@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var a = 10;
+			++a;     //a=11
+			var b = ++a + 2;   //a=12  b=12+2=14
+			console.log(a);  //12
+			console.log(b);  //14
+			
+			console.log('--------------------')
+			var c = 10;   
+			c++;   //c=11
+			var d = c++ + 2;    //c=12   d=11+2=13
+			console.log(c);  //12
+			console.log(d); //13
+			
+			console.log('--------------------')
+			var e = 10;
+			var f = e++ + ++e;     //e=12   f=10+12=22
+			console.log(e); //12
+			console.log(f);  //22
+			
+			//后置自增，先返回表达式原值，再变量自加1
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
