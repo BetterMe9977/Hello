@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//1. 能被4整除 不能被100整除 或者能被400整除
+			//弹出prompt输入框
+			//使用if语句判断
+			
+			var year = prompt('请您输入年份：');
+			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+				alert('您输入的年份是闰年');
+			} else {
+				alert('您输入的年份是平年');
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
