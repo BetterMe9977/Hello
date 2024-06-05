@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//1. 1~100之间所有数的平均值， 需要sum和的变量，平均值average
+			var sum = 0;
+			var average = 0;
+			for (var i = 1; i <= 100; i++) {
+				sum +=i;
+			}
+			average = sum / 100;
+			console.log(average);
+			
+			//2.  1～100所有偶数和奇数的和，需要偶数变量even  奇数变量odd
+			var even = 0;
+			var odd = 0;
+			for (var i = 1; i <= 100; i++) {
+				if (i % 2 == 0) {
+					even += i;
+				}
+				if (i % 2 != 0) {
+					odd += i;
+				}
+			}
+			console.log('1～100所有偶数和的和:' + even);
+			console.log('1～100所有奇数的和:' + odd);
+			
+			//or
+			var even = 0;
+			var odd = 0;
+			//所有奇数的和			
+			for (var i = 1; i <= 100; i+=2) {
+				odd += i;
+			}
+			console.log('1～100所有奇数的和:' + odd);
+			//所有偶数的和
+			for (var i = 2; i <= 100; i+=2) {
+				even += i;
+			}
+			console.log('1～100所有偶数和的和:' + even);
+			
+			//3.  1～100所有能被3整数的数字的和
+			var result = 0;
+			for(var i = 1; i <=100; i++){
+				if(i % 3 == 0) {
+					result += i;
+				}
+			}
+			console.log('1～100所有能被3整数的数字的和:' + result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

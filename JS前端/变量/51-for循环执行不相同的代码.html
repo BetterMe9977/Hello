@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//for循环可以 重复执行相同的代码			
+			for (var i = 1; i <= 100; i++){
+				console.log('这个人今年1岁了');
+			}
+						
+			//for循环可以 重复执行不相同的代码
+			//	因为有计数器变量 i 的存在， i每次循环值都会发生变化		
+			for (var i = 1; i <= 100; i++){
+				console.log('这个人今年' + i + '岁了');
+			}
+			
+			//嵌套 if 分支语句
+			for (var i = 1; i <= 100; i++){
+				if (i == 1){
+					console.log('这个人今年1岁了!!');
+				} else if (i == 100) {
+					console.log('这个人今年100岁了!!!');
+				} else {
+					console.log('这个人今年' + i + '岁了');
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
