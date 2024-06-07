@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//打印10行倒三角星星
+			var str = ''
+			for (var i = 1; i <= 10; i++) {
+				for(var j = i; j <= 10; j++){
+					str += '🌟';
+				}
+				//如果一行打印结束，要另起一行
+				str = str + '\n'
+			}
+			console.log(str);
+			
+			//或者
+			//打印10行倒三角星星
+			var str = ''
+			for (var i = 1; i <= 10; i++) {
+				for(var j = 1; j <= (10 - i+ 1); j++){
+					str += '🌟';
+				}
+				//如果一行打印结束，要另起一行
+				str = str + '\n'
+			}
+			console.log(str);
+			
+		
+		//打印10行正三角星星
+		var str = ''
+		for (var i = 1; i <= 10; i++) {
+			for(var j = 1; j <= i; j++){
+				str += '🌟';
+			}
+			
+			//如果一行打印结束，要另起一行
+			str = str + '\n'
+		}
+		console.log(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
