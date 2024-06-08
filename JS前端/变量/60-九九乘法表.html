@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//打印九九乘法表
+			var str = ''
+			for (var i = 1; i <= 9; i++) { //外层循环控制行数
+				for(var j = 1; j <= i; j++){ //内层循环控制列数
+					//str += '🌟';
+					str = j + 'x' + i + '=' + i * j;
+				}
+				//如果一行打印结束，要另起一行
+				str = str + '\n'
+			}
+			console.log(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
