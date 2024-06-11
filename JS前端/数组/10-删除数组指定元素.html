@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 将数组[2, 0, 6, 1, 77, 0, 52, 0, 25, 7] 中的0去掉后，
+			// 形成一个没有0 的新数组
+			// 1. 需要一个新数组用于存放筛选后的数据
+			// 2. 遍历原来的数组，把不是0 的元素添加 到新数组
+			// 3. 新数组的元素个数，用length不断累加
+			
+			var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+			var newArr = [];
+	
+			// 刚开始 newArr.length 就是0
+			 for (var i = 0; i < arr.length; i++) {
+				 if (arr[i] != 0) {
+					 //新数组应该从0开始,逐渐递增
+					newArr[newArr.length] = arr[i];
+				 }
+			 }			
+			console.log(newArr);
+			console.log(arr);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

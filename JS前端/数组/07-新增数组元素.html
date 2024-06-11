@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 1. 新增数组元素，修改数组长度
+			var arr = ['red', 'green', 'blue'];
+			console.log(arr.length);
+			arr.length = 5;  //修改数组长度为5
+			console.log(arr);
+			console.log(arr[3]); //undefined
+			console.log(arr[4]);
+			 
+			// 2. 新增数组元素，修改索引号    常用
+			var arr1 = ['red', 'green', 'blue'];
+			arr[3] = 'pink';
+			console.log(arr1);
+			arr[4] = 'black';
+			console.log(arr1);
+			arr[0] = 'yellow';   //元素替换
+			console.log(arr1);  
+			
+			//不要直接给数组名赋值，否则里面的元素都没有了
+			arr1 = '真好';
+			console.log(arr1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
