@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 作用域链： 内部函数访问外部函数的变量， 
+			// 采取的是链式查找方式来取哪个值 这种结构我们称之为 作用域链 就近原则
+			var num = 10;
+			function fn() {
+				var num = 20;
+				function fun() {
+					console.log(num); // 就近查询
+				}
+				fun();
+			}
+			fn();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

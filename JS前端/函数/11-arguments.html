@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// arguments 的使用 
+			//只有函数才有arguments对象，而且每个函数都内置好了arguments
+			
+			// arguments 对象存储了所有传递的实参
+			// 不确定传递实参的个数
+			function fn() {
+				console.log(arguments);
+				console.log(arguments.length);
+				console.log(arguments[2]);
+				//可以用数组方式遍历arguments
+				for (var i = 0; i < arguments.length; i++) {
+					console.log(arguments[i]);
+				}
+			}
+			
+			fn(1,2,3);
+			fn(1,2,3,4,5)
+			// 展示形式是伪数组的形式， 不是真正的数组
+			// 1. 具有数组的 length 属性
+			// 2. 按照索引的方式进行存储
+			// 3. 没有真正数组的一些方法
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

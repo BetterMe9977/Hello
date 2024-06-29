@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 利用函数翻转任意数组 reverse 翻转
+			function reverse(arr) {
+				var newArr = [];
+				for (var i = 0; i <arr.length; i++) {
+					newArr[i] = arr[arr.length - i -1];
+				}
+				return newArr;
+			}
+			var arr1 = reverse([1,3,4,6,9]);
+			console.log(arr1);
+			var arr2 = reverse(['blue', 'red', 'pink']);
+			console.log(arr2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
