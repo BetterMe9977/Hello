@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//利用构造函数创建对象
+			// 相同属性： 名字 年龄 性别 相同方法： 唱歌
+			// 构造函数的语法
+			// function 构造函数名() {
+			// 	this.属性 = 值
+			// 	this.方法 = function() {}
+			// }
+			// new 构造函数名();
+			function Star(uname, age, sex) {
+				this.name = uname;
+				this.age = age;
+				this.sex = sex;
+				this.sing = function(sang) {
+					console.log(sang);
+				}
+				
+			}
+			var user1 = new Star('jack', 18, 'man'); // 返回的是一个对象 
+			console.log(typeof user1);  // object
+			console.log(user1.name); 
+			console.log(user1['sex']);
+			user1.sing('hello');
+			
+			var user2 = new Star('tom',19, 'man');
+			console.log(user2.name);
+			console.log(user2.age);
+			user2.sing('byby')
+			
+			
+			new Star('mary',20, 'woman');
+			new Star('jane',21, 'woman');
+			// 1. 构造函数名字首字母大写
+			// 2. 构造函数不需要return 就可以返回结果
+			// 3. 调用构造函数 必须new
+			// 4. 只要 new Star() 调用函数就创建一个对象 
+			// 5. 属性和方法前面必须要有 this
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
