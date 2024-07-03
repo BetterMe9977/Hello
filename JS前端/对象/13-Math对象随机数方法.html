@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 1. Math 对象 随机数方法 random() 返回一个随机的小数 0 =< x < 1
+			// 2. 这个方法里面没有参数
+			// 3. 代码验证
+			
+			console.log(Math.random());
+			
+			// 4. 得到两个数之间的随机整数 且包含 这2个整数
+			// Math.floor(Math.random() * (max - min + 1)) + min;
+			function getRandom(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			console.log(getRandom(1, 10));
+			
+			// 5. 随机点名
+			var arr = ['tom', 'mary', 'jack', 'lucy', 'jane'];
+			console.log(arr[0]);
+			console.log(arr[getRandom(0,arr.length - 1)]);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

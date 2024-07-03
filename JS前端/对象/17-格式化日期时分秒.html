@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 格式化日期 年月日
+			var date = new Date();
+			console.log(date.getHours());  // 返回当前年
+			console.log(date.getMinutes());  // 月份➕1
+			console.log(date.getSeconds());  //
+			
+			// 封装一个函数 返回当前时分秒
+			function getTime() {
+				var time = new Date();
+				var h = time.getHours();
+				h < 10 ? '0' + h : h;
+				var m = time.getMinutes();
+				m < 10 ? '0' + m : m;
+				var s = time.getSeconds();
+				s < 10 ? '0' + s : s;
+				return h + ':' + m + ':' + s + '秒';
+				
+			}
+			console.log(getTime());
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
