@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 复杂数据类型传参
+			// 函数 的形参可以看作是一个变量，当把引用类型变量传给形参时，其实是把变量
+			// 在栈空间保存的地址复制给了形参，形参和实参其实保存的是同一个堆地址，
+			// 所以操作的是同一个对象
+			function Person(name) {
+				this.name = name;
+			}
+			
+			function f1(x) {
+				console.log(x.name);
+				x.name = 'tom';
+				console.log(x.name);   // tom
+			}
+			var p = new Person('jack');
+			console.log(p.name);  // jack
+			f1(p);  // jack
+			console.log(p.name);  // tom
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//  数组去重 ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b']
+			// 1. 从旧数组不断取出元素存入新数组，重复的元素只保留一个
+			// 2. indexOf(数组元素)  返回 -1  说明新数组里面没有这个元素
+			
+			//  封装一个 去重的函数 unique
+			
+			function unique(arr) {
+				var newArr = [];
+				for(var i = 0; i < arr.length; i++) {
+					if (newArr.indexOf(arr[i]) === -1) {
+						newArr.push(arr[i]);
+					}
+				}
+				return newArr;
+			}
+			var demo = unique(['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'])
+			console.log(demo);
+			
+			var demo2 = unique(['red', 'blue','red','pink']);
+			console.log(demo2);
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+	</body>
+</html>

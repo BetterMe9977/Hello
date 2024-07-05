@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 基本包装类型
+			var str = 'andy';
+			console.log(str.length);
+			// 对象 才有属性和方法  复杂数据类型 才有属性和方法
+			// 简单数据类型 有length属性 ？
+			// 把简答数据类型 包装成复杂数据类型
+			// 1. 把简单数据类型包装成复杂数据类型
+			var temp = new String('andy');
+			// 2. 把临时变量的值给 str
+			str = temp;
+			// 3. 销毁这个临时变量
+			temp = null;
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
