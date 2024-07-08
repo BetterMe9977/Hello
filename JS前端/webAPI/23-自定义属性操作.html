@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="demo" index='1' class="nav"></div>
+		<script>
+			var div = document.querySelector('div');
+			// 1. 获取元素的属性值
+			// 1） element.属性
+			// 自身带有的属性
+			console.log(div.id);
+			// 2) element.getAttribute('属性') 
+			// 自己添加的属性叫自定义属性
+			console.log(div.getAttribute('id'));
+			console.log(div.getAttribute('index'));
+			// 2. 设置元素属性值
+			// 1） element.属性 = ‘值’
+			// 自身带有的属性
+			div.id = 'test';
+			div.className = 'navs';
+			console.log(div.id);
+			console.log(div.className);
+			// 2) element.setAttribute('属性'，'值') ；
+			//主要针对自定义属性
+			div.setAttribute('index', 2);
+			div.setAttribute('class','footer');
+			// class 特殊 直接使用class
+			console.log('--------------');
+			console.log(div.getAttribute('index'));
+			console.log(div.className);
+			
+			// 移除属性 
+			div.removeAttribute('index');
+			console.log(div.getAttribute('index'));    //null
+			
+		</script>
+	</body>
+</html>

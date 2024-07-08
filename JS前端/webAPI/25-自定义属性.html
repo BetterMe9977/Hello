@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div getTime="20" data-index='2' data-list-name='andy'></div>
+		<!--H5 规定自定义属性 data 开头作为属性名并且赋值 比如：data-index='2' -->
+		
+		<script>
+			var div = document.querySelector('div');
+			console.log(div.getTime);   //undefined
+			// 自定义属性获得属性值   常用
+			console.log(div.getAttribute('getTime'));  //20
+			// 自定义属性设定属性 以及值
+			div.setAttribute('data-time', 30);
+			console.log(div.getAttribute('data-index'));  //2
+			console.log(div.getAttribute('data-time'));  //30
+			console.log(div.getAttribute('			console.log(div.dataset.index);'));
+			
+			// H5 新增获取自定义属性方法
+			// 只能获得 data- 开头 兼容性有问题
+			// element.dataset.index 或者  element.dataset['index'] 
+			// dataset 是一个集合 里面存放了所有以data开头的自定义属性
+			console.log(div.dataset);
+			// DOMStringMap {index: "2", time: "30"}
+			console.log(div.dataset.index);
+			console.log(div.dataset['index']);
+			// 如果自定义属性里面有多个 - 连接的单词，获取时候采用 驼峰命名法
+			console.log(div.dataset.listName); // 不是data-list-name			
+			//
+			
+		</script>
+	</body>
+</html>
