@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<script>
+			var ul = document.querySelector('ul');
+			// 1. node.cloneNode();   括号为空或者里面是false 只赋值标签，不复制内容
+			// 2. node.cloneNode(true); 括号true 复制标签，也复制内容
+			var lili = ul.children[0].cloneNode();
+			ul.appendChild(lili);
+			var lili = ul.children[0].cloneNode(true);
+			ul.appendChild(lili);
+		</script>
+		
+	</body>
+</html>

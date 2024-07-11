@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>123</ul>
+		<script>
+			// 1. 创建节点
+			var li = document.createElement('li');
+			// 2. 添加节点 node.appendChild(child) node父级 child子级
+			var ul = document.querySelector('ul');
+			ul.appendChild('li');
+			// 3. 添加节点 node.insertBefore(child, 指定元素)；
+			var lili = document.createElement('li');
+			ul.insertBefore(lili, ul.children[0]);
+			
+		</script>
+	</body>
+</html>
