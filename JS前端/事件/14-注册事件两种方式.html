@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button>传统注册事件</button>
+		<button>方法监听注册事件</button>
+		<script>
+			// 1. 传统方式注册事件
+			var btns = document.querySelectorAll('button');
+			btns[0].onclick = function() {
+				alert('hi');
+			}
+			btns[0].onclick  = function() {
+				alert('hello');
+			}
+			// 注册事件的唯一性
+			// 同一个元素同一个事件只能设置一个处理函数，
+			// 最后注册的处理函数将会覆盖前面注册的处理函数
+			
+			// 2.  方法监听注册事件 addEventListener()
+			// 1）里面的事件类型是字符串 必定加引号 而且不带on
+			// 2）同一个元素 同一个事件可以添加多个监听器（事件处理程序）
+			btns[1].addEventListener('click', function() {
+				alert('good');
+			})
+			
+			btns[1].addEventListener('click', function() {
+				alert('byby');
+			})
+		</script>
+	</body>
+</html>

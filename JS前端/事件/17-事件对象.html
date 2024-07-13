@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div {
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div>123</div>
+		<script>
+			// 事件对象
+			var div = document.querySelector('div');
+			// 1. event 就是一个事件对象，写道倾听函数的小括号里面 当形参
+			// 2. 事件对象只有有了事件才会存在，是系统自动创建，不需要传递参数
+			// 3. 事件对象： 事件的一系列相关数据的集合 跟事件相关，比如：
+			// 鼠标点击 包含鼠标相关信息；键盘事件包含键盘相关信息
+			
+			// div.onclick = function(event) {
+			// 	console.log(event); // 点击  MouseEvent
+			// }
+			
+			div.addEventListener('click', function(event){
+				console.log(event);
+			})
+			
+		</script>
+	</body>
+</html>
