@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son">son盒子</div>
+		</div>
+		
+		<script>
+			// 常见事件对象的属性和方法
+			// 阻止冒泡 dom 推荐的标准 stopPropagation()
+			var son = document.querySelector('.son');
+			son.addEventListener('click', function(e) {
+				alert('son');
+				e.stopPropagation();  // 停止传播
+				e.cancelBubble = true; // 非标准 取消冒泡
+			},false);
+			
+			var father = document.querySelector('.father');
+			father.addEventListener('click', function() {
+				alert('father');
+			},false);
+			
+			document.addEventListener('click', function() {
+				alert('document');
+			},false);
+		</script>
+	</body>
+</html>

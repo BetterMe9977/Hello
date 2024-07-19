@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+			body {
+				height: 3000px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			// 鼠标事件对象 MouseEvent
+			document.addEventListener('click', function(e) {
+				console.log(e); // MouseEvent
+				
+				// 1. client  鼠标在可视区 的x和y
+				console.log(e.clientX);
+				console.log(e.clientY);
+				
+				console.log('----------------------');
+				
+				// 2. page 鼠标在 页面文档 的x和y   🔥重点
+				console.log(e.pageX);
+				console.log(e.pageY);	
+				console.log('----------------------');
+				
+				// 3. screen 
+				// 1. client  鼠标在 电脑屏幕 的x和y
+				console.log(e.screenX);
+				console.log(e.screenY);
+			})
+		</script>
+	</body>
+</html>
